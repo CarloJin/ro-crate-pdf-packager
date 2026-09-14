@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/CarloJin/ro-crate-pdf-packager#readme",
   "dependencies": {
-    "pdfjs-dist": "^6.3.289",
+    "pdfjs-dist": "5.4.624",
     "ro-crate": "^3.7.2"
   },
   "devDependencies": {

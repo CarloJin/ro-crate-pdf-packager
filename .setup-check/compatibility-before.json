@@ -1,0 +1,5 @@
+{
+  "pass": false,
+  "error": "TypeError: this[#methodPromises].getOrInsertComputed is not a function",
+  "stack": "TypeError: this[#methodPromises].getOrInsertComputed is not a function\n    at WorkerTransport.getMetadata (http://127.0.0.1:5179/node_modules/.vite/deps/pdfjs-dist.js?v=5360c00b:14255:31)\n    at PDFDocumentProxy.getMetadata (http://127.0.0.1:5179/node_modules/.vite/deps/pdfjs-dist.js?v=5360c00b:13260:26)\n    at http://127.0.0.1:5179/.setup-check/check.js:15:30"
+}

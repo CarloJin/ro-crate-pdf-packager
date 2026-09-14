@@ -1,0 +1,115 @@
+{
+  "pass": true,
+  "pdfjsVersion": "5.4.624",
+  "mapGetOrInsertComputed": "undefined",
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+  "realWorker": true,
+  "pages": 1,
+  "title": "Setup fixture",
+  "crateEntities": 3,
+  "directoryPicker": true,
+  "secureContext": true,
+  "applicationExtraction": true,
+  "brokenPDFWarning": true,
+  "suppliedRows": 8,
+  "missingMetadataEditable": true,
+  "editsPersisted": true,
+  "supplied": [
+    {
+      "name": "an0022_crocodile.pdf",
+      "metadata": {
+        "title": "",
+        "authors": "",
+        "description": "",
+        "datePublished": ""
+      },
+      "creationDate": "1601-01-01T00:00Z",
+      "failed": false,
+      "warning": ""
+    },
+    {
+      "name": "gu0001_baleh.pdf",
+      "metadata": {
+        "title": "",
+        "authors": "",
+        "description": "",
+        "datePublished": ""
+      },
+      "creationDate": "1601-01-01T00:00:00.000Z",
+      "failed": false,
+      "warning": ""
+    },
+    {
+      "name": "KAYT_2014_258_book.pdf",
+      "metadata": {
+        "title": "",
+        "authors": "",
+        "description": "",
+        "datePublished": ""
+      },
+      "creationDate": "2024-01-24T06:09:18.000Z",
+      "failed": false,
+      "warning": ""
+    },
+    {
+      "name": "KAYT_2014_260_text.pdf",
+      "metadata": {
+        "title": "",
+        "authors": "",
+        "description": "",
+        "datePublished": ""
+      },
+      "creationDate": "2023-09-22T13:26:10+09:30",
+      "failed": false,
+      "warning": ""
+    },
+    {
+      "name": "LO_Sea_Creatures_first_language.pdf",
+      "metadata": {
+        "title": "",
+        "authors": "",
+        "description": "",
+        "datePublished": ""
+      },
+      "creationDate": "2012-05-16T14:55:46+09:30",
+      "failed": false,
+      "warning": ""
+    },
+    {
+      "name": "Mi-Tjiwilirr i Wulumen Tulh.pdf",
+      "metadata": {
+        "title": "",
+        "authors": "",
+        "description": "",
+        "datePublished": ""
+      },
+      "creationDate": "2017-06-08T14:21:36+09:30",
+      "failed": false,
+      "warning": ""
+    },
+    {
+      "name": "NG_Whats_this_Eng.pdf",
+      "metadata": {
+        "title": "",
+        "authors": "",
+        "description": "",
+        "datePublished": ""
+      },
+      "creationDate": "",
+      "failed": false,
+      "warning": ""
+    },
+    {
+      "name": "pi0004_maku_maku.pdf",
+      "metadata": {
+        "title": "",
+        "authors": "",
+        "description": "",
+        "datePublished": ""
+      },
+      "creationDate": "",
+      "failed": false,
+      "warning": ""
+    }
+  ]
+}

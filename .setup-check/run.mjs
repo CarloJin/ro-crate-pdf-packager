@@ -36,7 +36,10 @@ try {
   const pending = new Map();
   socket.onmessage = e => { const data = JSON.parse(e.data); if (data.id) { pending.get(data.id)?.(data); pending.delete(data.id); } };
   const send = (method, params = {}) => new Promise(resolve => { pending.set(++id, resolve); socket.send(JSON.stringify({ id, method, params })); });
-  await send('Page.navigate', { url: 'http://127.0.0.1:5179/.setup-check/index.html' });
+  if (process.env.COMPAT_CHECK) await send('Page.addScriptToEvaluateOnNewDocument', {
+    source: 'delete Map.prototype.getOrInsertComputed;',
+  });
+  await send('Page.navigate', { url: 'http://127.0.0.1:5179/.setup-check/index.html' + (process.env.COMPAT_CHECK ? '?compat' : '') });
   let result;
   for (let i = 0; i < 150; i++) {
     const reply = await send('Runtime.evaluate', { expression: 'window.setupResult', returnByValue: true });
@@ -45,7 +48,7 @@ try {
     await new Promise(r => setTimeout(r, 200));
   }
   if (!result) throw new Error('Browser smoke check timed out');
-  await writeFile('.setup-check/result.json', JSON.stringify(result, null, 2) + '\n');
+  await writeFile(process.env.CHECK_RESULT || '.setup-check/result.json', JSON.stringify(result, null, 2) + '\n');
   console.log(JSON.stringify(result, null, 2));
   if (!result.pass || !result.directoryPicker || !result.secureContext) process.exitCode = 1;
   socket.send(JSON.stringify({ id: ++id, method: 'Browser.close' }));

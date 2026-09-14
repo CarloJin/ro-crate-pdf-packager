@@ -1,5 +1,7 @@
 # PDF.js compatibility fix — 2026-09-15
 
+Commands and repository paths below are relative to the project root unless absolute.
+
 ## Confirmed cause
 
 The reported error was reproduced with PDF.js 6.3.289 by deleting `Map.prototype.getOrInsertComputed` in a headless Chrome test page. The captured stack is in `.setup-check/compatibility-before.json`:

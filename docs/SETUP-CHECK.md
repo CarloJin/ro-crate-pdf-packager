@@ -1,5 +1,7 @@
 # Setup check — 2026-09-15
 
+Commands and repository paths below are relative to the project root unless absolute.
+
 Scope: SPEC.md environment and minimal browser integration only. Application implementation and full workflow testing are deferred.
 
 - PASS: Windows, Node 24.16.0, npm 11.13.0; Chrome 152 headless runs on localhost. Secure context and `showDirectoryPicker` are available (picker interaction is deferred).

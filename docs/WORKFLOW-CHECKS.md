@@ -1,5 +1,7 @@
 # Minimum workflow checks — 2026-09-15
 
+Commands and repository paths below are relative to the project root unless absolute.
+
 Implemented the minimum SPEC.md workflow with native directory handles. No additional dependencies or stretch goals.
 
 ## Results

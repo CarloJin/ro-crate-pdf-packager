@@ -26,7 +26,7 @@ npm run check:setup
 To inspect actual exports without the browser harness:
 
 ```sh
-node scripts/verify-export.mjs ../supplied_files ./output_files
+node scripts/verify-export.mjs ../supplied_files ./output-files
 ```
 
 ## Workflow
@@ -40,13 +40,13 @@ Edits persist when switching files, but not after reloading or replacing the sou
 
 ## Included sample and verified results
 
-The actual browser-exported sample is [output_files/ro-crate-140f2f76-3032-41da-a661-7d824b44b391](output_files/ro-crate-140f2f76-3032-41da-a661-7d824b44b391/), including its manifest and eight PDFs. Collection name, description and licence contain `Sample`, with publication date `2026-09-15`; these are sample values, not a licence recommendation.
+The actual browser-exported sample is [output-files/ro-crate-140f2f76-3032-41da-a661-7d824b44b391](output-files/ro-crate-140f2f76-3032-41da-a661-7d824b44b391/), including its manifest and eight PDFs. Collection name, description and licence contain `Sample`, with publication date `2026-09-15`; these are sample values, not a licence recommendation.
 
 - Production build and five focused Node tests passed.
 - Browser checks passed for a real PDF.js worker, all eight supplied PDFs, missing metadata, malformed-PDF handling and edit persistence. The compatibility regression also passed with the newer Map API unavailable.
 - The actual crate passed focused checks for RO-Crate 1.3 structure, all eight `hasPart` references, copied file paths, omitted blank optional fields and matching source/output SHA-256 hashes.
 
-Details: [EXPORT-CHECK.md](EXPORT-CHECK.md), [PDF-COMPATIBILITY-CHECK.md](PDF-COMPATIBILITY-CHECK.md), and [WORKFLOW-CHECKS.md](WORKFLOW-CHECKS.md). Earlier setup results remain in [SETUP-CHECK.md](SETUP-CHECK.md); the compatibility report records the subsequent PDF.js version change. Machine-readable evidence and the browser harness are retained in `.setup-check/`.
+Details: [EXPORT-CHECK.md](docs/EXPORT-CHECK.md), [PDF-COMPATIBILITY-CHECK.md](docs/PDF-COMPATIBILITY-CHECK.md), and [WORKFLOW-CHECKS.md](docs/WORKFLOW-CHECKS.md). Earlier setup results remain in [SETUP-CHECK.md](docs/SETUP-CHECK.md); the compatibility report records the subsequent PDF.js version change. Machine-readable evidence and the browser harness are retained in `.setup-check/`.
 
 ## Limitations and deliverables
 

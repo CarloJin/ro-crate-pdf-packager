@@ -1,6 +1,6 @@
 {
   "source": "D:\\Coding\\ro-crate-packaging-tool\\supplied_files",
-  "output": "D:\\Coding\\ro-crate-packaging-tool\\ro-crate-pdf-packager\\output_files",
+  "output": "D:\\Coding\\ro-crate-packaging-tool\\ro-crate-pdf-packager\\output-files",
   "scope": "Focused actual-export check, not full conformance validation",
   "crates": [
     {

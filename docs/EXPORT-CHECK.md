@@ -1,11 +1,13 @@
 # Actual browser export check — 2026-09-15
 
+Commands and repository paths below are relative to the project root unless absolute.
+
 Focused inspection, not full conformance validation.
 
 Command:
 
 ```powershell
-node scripts/verify-export.mjs 'D:/Coding/ro-crate-packaging-tool/supplied_files' 'D:/Coding/ro-crate-packaging-tool/ro-crate-pdf-packager/output_files'
+node scripts/verify-export.mjs 'D:/Coding/ro-crate-packaging-tool/supplied_files' 'D:/Coding/ro-crate-packaging-tool/ro-crate-pdf-packager/output-files'
 ```
 
 Checked actual crate `ro-crate-140f2f76-3032-41da-a661-7d824b44b391`.

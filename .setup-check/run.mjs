@@ -1,6 +1,6 @@
 import { createServer } from 'vite';
 import { spawn } from 'node:child_process';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 // Generate a tiny valid PDF without adding a fixture-generation dependency.
@@ -12,8 +12,18 @@ const offsets = [0];
 objects.forEach((object, i) => { offsets.push(pdf.length); pdf += `${i + 1} 0 obj\n${object}\nendobj\n`; });
 const xref = pdf.length;
 pdf += `xref\n0 7\n0000000000 65535 f \n${offsets.slice(1).map(x => `${String(x).padStart(10, '0')} 00000 n \n`).join('')}trailer\n<< /Size 7 /Root 1 0 R /Info 6 0 R >>\nstartxref\n${xref}\n%%EOF\n`;
-const server = await createServer({ plugins: [{ name: 'setup-fixture', configureServer(server) { server.middlewares.use('/fixture.pdf', (_req, res) => { res.setHeader('Content-Type', 'application/pdf'); res.end(pdf); }); } }], server: { host: '127.0.0.1', port: 5179, strictPort: true, watch: { ignored: ['**/.setup-check/profile/**'] } } });
-server.middlewares.use('/fixture.pdf', (_req, res) => { res.setHeader('Content-Type', 'application/pdf'); res.end(pdf); });
+const suppliedDirectory = path.resolve('../supplied_files');
+const supplied = (await readdir(suppliedDirectory)).filter(name => /\.pdf$/i.test(name));
+const server = await createServer({ plugins: [{ name: 'setup-fixture', configureServer(server) {
+  server.middlewares.use('/fixture.pdf', (_req, res) => { res.setHeader('Content-Type', 'application/pdf'); res.end(pdf); });
+  server.middlewares.use('/supplied-list', (_req, res) => { res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(supplied)); });
+  server.middlewares.use('/supplied-pdf', async (req, res) => {
+    const index = Number(req.url.slice(1));
+    if (!Number.isInteger(index) || !supplied[index]) { res.statusCode = 404; res.end(); return; }
+    try { res.setHeader('Content-Type', 'application/pdf'); res.end(await readFile(path.join(suppliedDirectory, supplied[index]))); }
+    catch (error) { res.statusCode = 500; res.end(error.message); }
+  });
+} }], server: { host: '127.0.0.1', port: 5179, strictPort: true, watch: { ignored: ['**/.setup-check/profile/**'] } } });
 await server.listen();
 const browser = spawn('C:/Program Files/Google/Chrome/Application/chrome.exe', ['--headless=new', '--no-first-run', '--no-default-browser-check', '--remote-debugging-port=9239', `--user-data-dir=${path.resolve('.setup-check/profile')}`, 'about:blank'], { windowsHide: true, stdio: 'ignore' });
 let socket;

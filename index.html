@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PDF to RO-Crate</title><link rel="stylesheet" href="/style.css"></head>
+<body><main>
+<h1>PDF to RO-Crate</h1><p>Choose PDFs, review their metadata, then export a collection. Files stay in your browser. Edits last until you reload or select another source.</p>
+<p id="status" role="status" aria-live="polite">Select a source folder to begin.</p>
+<button id="source" type="button">Select source folder</button><span id="source-name"></span>
+<form id="form">
+<fieldset id="collection"><legend>Collection metadata — all fields required</legend>
+<label>Name <input id="collection-name" required></label>
+<label>Description <textarea id="collection-description" required></textarea></label>
+<label>Publication date <input id="collection-datePublished" type="date" required></label>
+<label>Licence statement <textarea id="collection-license" required></textarea></label>
+<label class="check"><input id="license-reviewed" type="checkbox" required> I have reviewed this licence statement for this collection.</label>
+</fieldset>
+<div class="review"><section><h2>PDFs</h2><p id="count">No PDFs selected.</p><ul id="file-list"></ul></section>
+<fieldset id="editor" disabled><legend>File metadata</legend><p id="file-path"></p><p id="file-warning"></p>
+<label class="check"><input id="include" type="checkbox"> Include this PDF</label>
+<label>Title <input id="file-title"></label><small id="title-origin"></small>
+<label>Authors — one person per line <textarea id="file-authors"></textarea></label>
+<label>Description <textarea id="file-description"></textarea></label>
+<label>Publication date (optional) <input id="file-datePublished" type="date"></label>
+<p>Extracted creation date: <span id="creation-date"></span></p>
+<label id="failure-label" class="check" hidden><input id="failure-confirmed" type="checkbox"> Include this PDF despite the extraction failure; I have reviewed its metadata.</label>
+</fieldset></div>
+<button id="output" type="button">Select output directory</button> <span id="output-name">None selected</span>
+<p><button id="export" type="submit">Export reviewed RO-Crate</button></p>
+</form></main><script type="module" src="/main.js"></script></body></html>

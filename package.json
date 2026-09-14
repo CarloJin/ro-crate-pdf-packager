@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "check:setup": "node .setup-check/run.mjs"
+    "check:setup": "node .setup-check/run.mjs",
+    "test": "node --test"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,96 @@
+{
+  "source": "D:\\Coding\\ro-crate-packaging-tool\\supplied_files",
+  "output": "D:\\Coding\\ro-crate-packaging-tool\\ro-crate-pdf-packager\\output_files",
+  "scope": "Focused actual-export check, not full conformance validation",
+  "crates": [
+    {
+      "folder": "ro-crate-140f2f76-3032-41da-a661-7d824b44b391",
+      "pass": true,
+      "files": 8,
+      "hasPartReferences": 8,
+      "authorReferences": 0,
+      "collection": {
+        "name": "Sample",
+        "description": "Sample",
+        "datePublished": "2026-09-15",
+        "license": "Sample"
+      },
+      "fileMetadata": [
+        {
+          "id": "files/an0022_crocodile.pdf",
+          "name": "an0022_crocodile"
+        },
+        {
+          "id": "files/gu0001_baleh.pdf",
+          "name": "gu0001_baleh"
+        },
+        {
+          "id": "files/KAYT_2014_258_book.pdf",
+          "name": "KAYT_2014_258_book"
+        },
+        {
+          "id": "files/KAYT_2014_260_text.pdf",
+          "name": "KAYT_2014_260_text"
+        },
+        {
+          "id": "files/LO_Sea_Creatures_first_language.pdf",
+          "name": "LO_Sea_Creatures_first_language"
+        },
+        {
+          "id": "files/Mi-Tjiwilirr%20i%20Wulumen%20Tulh.pdf",
+          "name": "Mi-Tjiwilirr i Wulumen Tulh"
+        },
+        {
+          "id": "files/NG_Whats_this_Eng.pdf",
+          "name": "NG_Whats_this_Eng"
+        },
+        {
+          "id": "files/pi0004_maku_maku.pdf",
+          "name": "pi0004_maku_maku"
+        }
+      ],
+      "hashes": [
+        {
+          "path": "KAYT_2014_258_book.pdf",
+          "sourceSHA256": "a86b16204ff35387ca64a47ebba2573990cfc0d2901d1cc81461761ca9a28684",
+          "outputSHA256": "a86b16204ff35387ca64a47ebba2573990cfc0d2901d1cc81461761ca9a28684"
+        },
+        {
+          "path": "KAYT_2014_260_text.pdf",
+          "sourceSHA256": "f1359db47e36a57ce6ea1bfa8adcdabb878070cae7f49e509622e2b0039fb2cd",
+          "outputSHA256": "f1359db47e36a57ce6ea1bfa8adcdabb878070cae7f49e509622e2b0039fb2cd"
+        },
+        {
+          "path": "LO_Sea_Creatures_first_language.pdf",
+          "sourceSHA256": "17e9c946046b04158474e48330c2a31d3ebc972aab64e71083b684786822d6c7",
+          "outputSHA256": "17e9c946046b04158474e48330c2a31d3ebc972aab64e71083b684786822d6c7"
+        },
+        {
+          "path": "Mi-Tjiwilirr i Wulumen Tulh.pdf",
+          "sourceSHA256": "f39ecc6263544496a74e27f4ea5055bb102c2abf1b2d2fc0b1ce41d88f1a8236",
+          "outputSHA256": "f39ecc6263544496a74e27f4ea5055bb102c2abf1b2d2fc0b1ce41d88f1a8236"
+        },
+        {
+          "path": "NG_Whats_this_Eng.pdf",
+          "sourceSHA256": "7d2032a7ea5881e14eafeba7b3d7f5b1902738dbb53a2ac81a0412f057e8afcf",
+          "outputSHA256": "7d2032a7ea5881e14eafeba7b3d7f5b1902738dbb53a2ac81a0412f057e8afcf"
+        },
+        {
+          "path": "an0022_crocodile.pdf",
+          "sourceSHA256": "92d39e2c344a4cc722e6754c1823a1185c1320e9bd2ffea01605f8262f1537d1",
+          "outputSHA256": "92d39e2c344a4cc722e6754c1823a1185c1320e9bd2ffea01605f8262f1537d1"
+        },
+        {
+          "path": "gu0001_baleh.pdf",
+          "sourceSHA256": "24ddb627d95ac1c7494220039ea29e7ebc8cb1a83b7485be456bd14cb1237a59",
+          "outputSHA256": "24ddb627d95ac1c7494220039ea29e7ebc8cb1a83b7485be456bd14cb1237a59"
+        },
+        {
+          "path": "pi0004_maku_maku.pdf",
+          "sourceSHA256": "a0bb2781c912b57698d8f0047caaa07abea0de3e10719f63b42019854d612fe4",
+          "outputSHA256": "a0bb2781c912b57698d8f0047caaa07abea0de3e10719f63b42019854d612fe4"
+        }
+      ]
+    }
+  ]
+}

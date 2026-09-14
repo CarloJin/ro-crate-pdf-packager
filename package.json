@@ -1,0 +1,29 @@
+{
+  "name": "ro-crate-pdf-packager",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "check:setup": "node .setup-check/run.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarloJin/ro-crate-pdf-packager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/CarloJin/ro-crate-pdf-packager/issues"
+  },
+  "homepage": "https://github.com/CarloJin/ro-crate-pdf-packager#readme",
+  "dependencies": {
+    "pdfjs-dist": "^6.3.289",
+    "ro-crate": "^3.7.2"
+  },
+  "devDependencies": {
+    "vite": "^8.3.0"
+  },
+  "private": true
+}
